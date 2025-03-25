@@ -3,7 +3,7 @@
 2021年に購入したraspberry pi 4Bを再び探し出して、使うことにしました。
 
 ### 構築手順
-1. teslaushのイメージをsd cardに焼く
+1. teslaushのイメージをsd cardに焼く、イメージは`https://github.com/marcone/teslausb`からダウンロードする。
 2. `teslausb_setup_variables.conf`をsd cardのbootディレクトリに置く
 3. sd cardをraspberry pi 4bに入れて、raspberry 4bをpcと繋ぐ
 4. `ssh pi@teslausb.local`でraspberry pi 4bに入る(初期パスワードはraspberry)
