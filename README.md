@@ -52,7 +52,7 @@ A: No. While recent recordings are not deleted immediately after archiving (so t
 全部のFAQは以下となります。  
 https://github.com/marcone/teslausb/wiki/FAQ
 
-### [Discord](https://discord.gg/2WgJFrFc)で開発者のかこの回答から拾ったもの
+### [Discord](https://discord.gg/2WgJFrFc)で開発者の過去の回答から拾ったもの
 yes, it will keep taking snapshots, and deleting older snapshots when free space is less than 10G+3%.  
 clipsをアーカイブしたらすぐteslausbから削除するのではなく、容量が圧迫したら削除される仕様になっている。
 
