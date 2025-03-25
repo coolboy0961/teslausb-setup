@@ -76,12 +76,14 @@ https://www.aterm.jp/function/guide4/wireless_cmx/list/iee-dual/m01_m12a.html
 ルーター側の設定が終わると、もし自分のWIFIは2.4GHzと5GHzを同じSSIDにしたい場合、teslausb側の設定を修正する必要があります。  
 `/etc/wpa_supplicant/wpa_supplicant.conf`にあるnetworkに以下のようにbssidの追加指定ができます。  
 このbssidを指定することで、必ず5GHzのほうにアクセスするようになります。指定しないと、電波の強い2.4Ghzに接続してしまいがちです。  
+```
 network={
 ssid=”XXXXXXXX”
 bssid=xx:xx:xx:xx:xx:xx
 psk=”your_wifi_password”
 key_mgmt=WPA-PSK
 }
+```
 
 bssidの確認ですが、MacOSの場合、optionを押しながら、右上のWIFIアイコンを左クリックすると出てきます。  
 また上記設定はteslausbの初期設定の後に行う方法です。  
