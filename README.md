@@ -107,3 +107,19 @@ beacon int: 100
 ### ロック音
 自分の好きなロック音を追加しました。  
 CAMのルートディレクトリにそのままのファイル名で入れて、おもちゃ箱→ブームボックスに入って、ロック音をONにして、音楽をUSBにします。
+
+### CAM_SIZEという設定の決め方について
+デフォルトは40GBになります。  
+teslaの仕様だと、recentclipsは常に最新の1時間しか保持しないですが、
+teslausbは容量が許す限り、recentclipsをずっと保持し続けます。
+保持する方法はtesla車が見えない領域に過去のrecentclipsを移動します。tesla車はその動きに気づきません。
+これを理解した上で、CAM_SIZEについて考えると、256GBのSDカードでCAM_SIZEが40GBにする場合、tesla車は40GBしか見えません。
+直近1時間のrecentclips、savedclips、sentryclipsは全部この40GBに保存します。
+NASへのアーカイブの間隔が長くて、アーカイブする前に40GBに達してしまうと、teslausbは古いものから削除するので、一部の記録がロストすることになります。
+逆にtesla車が見えない領域は216GBくらいあるので、recentclipsはたくさん残すことができます。
+なので、従来のドライブレコーダーと同じような使い方がしたければ、CAM_SIZEをデフォルトの40にして、savedclipsとsentryclipsに気にしません。
+何かあったら、teslausbのweb interfaceで過去のrecentclipsを調べます。tesla車が見えないところに保存しているので、tesla車では直近1時間の物しか見えないです。
+もしteslaのDashCamの使い方がしたければ、CAM_SIZEをできるだけ大きくして、recentclipsは1時間以前の物は気にしません。
+ただし、何か記録したときは自身の操作でsavedclipsを作ったり、セントリーモードをよく使って、sentryclipsをたくさん保存します。
+
+私はどっちも極端だなあと思って、256GBのSDカードにおいて、CAM_SIZEを128GBにしました。
