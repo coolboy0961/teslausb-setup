@@ -29,9 +29,9 @@
     reboot
     ```
 
-構築手順は以下を参考に作成しました。rsyncにしたのはraspberry pi zero 2wで検証する時に、cifsにした場合、ときどき一部のファイルが同期されないことがあったからです。
-https://github.com/marcone/teslausb/blob/main-dev/doc/OneStepSetup.md
-https://github.com/marcone/teslausb/blob/main-dev/doc%2FSetupRSync.md
+構築手順は以下を参考に作成しました。rsyncにしたのはraspberry pi zero 2wで検証する時に、cifsにした場合、ときどき一部のファイルが同期されないことがあったからです。  
+https://github.com/marcone/teslausb/blob/main-dev/doc/OneStepSetup.md  
+https://github.com/marcone/teslausb/blob/main-dev/doc%2FSetupRSync.md  
 
 ### 役に立つFAQ
 Q: How do I change the TeslaUSB configuration?  
